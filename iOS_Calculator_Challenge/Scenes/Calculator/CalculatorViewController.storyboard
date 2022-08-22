@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Calculator View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CalculatorViewController" id="Y6W-OH-hqX" customClass="CalculatorViewController" customModule="iOS_Calculator_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result = 0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="8Mi-Ei-8Yt">
+                                <rect key="frame" x="16" y="68" width="382" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter the second operand" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BNQ-Bf-9K0">
+                                <rect key="frame" x="16" y="114" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Vcj-hi-gzN">
+                                <rect key="frame" x="16" y="164" width="382" height="33"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZW-vY-HVy">
+                                        <rect key="frame" x="0.0" y="0.0" width="47.5" height="33"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Undo"/>
+                                        <connections>
+                                            <action selector="undoBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qNS-t2-ba8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfK-An-8vA">
+                                        <rect key="frame" x="55.5" y="0.0" width="48" height="33"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="oprationBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HLH-Dh-Cjm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPu-8e-zLR">
+                                        <rect key="frame" x="111.5" y="0.0" width="47.5" height="33"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="-"/>
+                                        <connections>
+                                            <action selector="oprationBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="c4x-mX-zAd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5b3-Fo-jsZ">
+                                        <rect key="frame" x="167" y="0.0" width="48" height="33"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="*"/>
+                                        <connections>
+                                            <action selector="oprationBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="oAR-iY-itg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSo-jm-G4W">
+                                        <rect key="frame" x="223" y="0.0" width="47.5" height="33"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="/"/>
+                                        <connections>
+                                            <action selector="oprationBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3tI-Oo-6Kz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRc-Y1-hOz">
+                                        <rect key="frame" x="278.5" y="0.0" width="48" height="33"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="="/>
+                                        <connections>
+                                            <action selector="equalBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Kfd-hI-zSL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ek3-OE-sA0">
+                                        <rect key="frame" x="334.5" y="0.0" width="47.5" height="33"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Redo"/>
+                                        <connections>
+                                            <action selector="redoBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="upE-gT-FqM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wsS-6k-cf3">
+                                <rect key="frame" x="16" y="213" width="382" height="633"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="E6E-ZN-O7G">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8Mi-Ei-8Yt" secondAttribute="trailing" constant="16" id="FrT-cr-XCh"/>
+                            <constraint firstItem="8Mi-Ei-8Yt" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="KR2-70-fsd"/>
+                            <constraint firstItem="Vcj-hi-gzN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="MVY-KZ-wj7"/>
+                            <constraint firstItem="Vcj-hi-gzN" firstAttribute="top" secondItem="BNQ-Bf-9K0" secondAttribute="bottom" constant="16" id="NoY-oO-B9O"/>
+                            <constraint firstItem="BNQ-Bf-9K0" firstAttribute="top" secondItem="8Mi-Ei-8Yt" secondAttribute="bottom" constant="16" id="Tvq-uo-VOL"/>
+                            <constraint firstItem="8Mi-Ei-8Yt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="XLP-bI-099"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wsS-6k-cf3" secondAttribute="trailing" constant="16" id="Xz9-uG-GJl"/>
+                            <constraint firstItem="wsS-6k-cf3" firstAttribute="top" secondItem="Vcj-hi-gzN" secondAttribute="bottom" constant="16" id="Z8j-Cx-8qO"/>
+                            <constraint firstItem="wsS-6k-cf3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Zch-PR-ueu"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="wsS-6k-cf3" secondAttribute="bottom" constant="16" id="hcS-us-DPJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BNQ-Bf-9K0" secondAttribute="trailing" constant="16" id="iy4-eW-sNf"/>
+                            <constraint firstItem="BNQ-Bf-9K0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="nmO-eh-Kzn"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Vcj-hi-gzN" secondAttribute="trailing" constant="16" id="txg-xy-rEr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="wsS-6k-cf3" id="1Ge-yF-1DV"/>
+                        <outlet property="equalBtn" destination="VRc-Y1-hOz" id="xWM-0R-3SW"/>
+                        <outlet property="redoBtn" destination="ek3-OE-sA0" id="epJ-Sx-8CB"/>
+                        <outlet property="resultLbl" destination="8Mi-Ei-8Yt" id="cXh-u4-dK8"/>
+                        <outlet property="textField" destination="BNQ-Bf-9K0" id="0oi-Be-OM3"/>
+                        <outlet property="undoBtn" destination="DZW-vY-HVy" id="iRV-Xg-VgE"/>
+                        <outletCollection property="oprationBtns" destination="kfK-An-8vA" collectionClass="NSMutableArray" id="W2i-jX-2uu"/>
+                        <outletCollection property="oprationBtns" destination="SPu-8e-zLR" collectionClass="NSMutableArray" id="zoE-Id-igE"/>
+                        <outletCollection property="oprationBtns" destination="5b3-Fo-jsZ" collectionClass="NSMutableArray" id="NhK-xx-tlX"/>
+                        <outletCollection property="oprationBtns" destination="cSo-jm-G4W" collectionClass="NSMutableArray" id="mQI-Ql-A48"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="39" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

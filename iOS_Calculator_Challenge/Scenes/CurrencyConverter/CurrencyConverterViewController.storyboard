@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Currency Converter View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CurrencyConverterViewController" id="Y6W-OH-hqX" customClass="CurrencyConverterViewController" customModule="iOS_Calculator_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="fwJ-vq-uqC">
+                                <rect key="frame" x="16" y="76" width="382" height="55"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="40"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EGP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ppw-bi-wRE">
+                                <rect key="frame" x="32" y="163" width="350" height="45.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7w2-GQ-4Fp">
+                                <rect key="frame" x="32" y="240.5" width="350" height="45"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Convert">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="convertBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="o8p-Ga-ra0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fwJ-vq-uqC" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="1N9-Tb-mtG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7w2-GQ-4Fp" secondAttribute="trailing" constant="32" id="3mu-67-NDP"/>
+                            <constraint firstItem="7w2-GQ-4Fp" firstAttribute="top" secondItem="ppw-bi-wRE" secondAttribute="bottom" constant="32" id="5D5-E6-Ql5"/>
+                            <constraint firstItem="ppw-bi-wRE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="71m-fz-lDQ"/>
+                            <constraint firstItem="fwJ-vq-uqC" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="LDj-KY-N0n"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ppw-bi-wRE" secondAttribute="trailing" constant="32" id="MwS-vW-N5b"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fwJ-vq-uqC" secondAttribute="trailing" constant="16" id="UNO-cB-toN"/>
+                            <constraint firstItem="7w2-GQ-4Fp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="nmt-cm-xmJ"/>
+                            <constraint firstItem="ppw-bi-wRE" firstAttribute="top" secondItem="fwJ-vq-uqC" secondAttribute="bottom" constant="32" id="rnv-Js-zFl"/>
+                            <constraint firstItem="fwJ-vq-uqC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="zby-Vt-K1E"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="convertBtn" destination="7w2-GQ-4Fp" id="v4g-jx-IS2"/>
+                        <outlet property="egpTF" destination="ppw-bi-wRE" id="vNJ-dq-8ej"/>
+                        <outlet property="usdLbl" destination="fwJ-vq-uqC" id="Kfd-1K-mVb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="39" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
